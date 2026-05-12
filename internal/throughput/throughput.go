@@ -17,6 +17,7 @@ import (
 	"golang.org/x/time/rate"
 )
 
+// Throughput struct holds the configuration for the throughput tests, including the Salesforce instance URL, the list of MemberDetails to use for generating test cases, the authentication token, desired RPS, and test duration.
 type Throughput struct {
 	InstanceURL  string
 	Ml           []*data_factory.MemberDetails
