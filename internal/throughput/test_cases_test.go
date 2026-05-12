@@ -10,9 +10,9 @@ import (
 func TestFactories(t *testing.T) {
 	instanceURL := "https://test.salesforce.com"
 	member := &data_factory.MemberDetails{
-		Id:               "rec123",
+		ID:               "rec123",
 		MembershipNumber: "MEM-999",
-		PersonAccountId:  "ACC-000",
+		PersonAccountID:  "ACC-000",
 		Vouchers: []data_factory.Voucher{
 			{VoucherCode: "VOUCH1"},
 			{VoucherCode: "VOUCH2"},
