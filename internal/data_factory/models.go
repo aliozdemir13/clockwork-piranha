@@ -3,9 +3,9 @@ package data_factory
 
 // MemberDetails in use as the main data model of the testing logic
 type MemberDetails struct {
-	Id               string `json:"Id"`
+	ID               string `json:"Id"`
 	MembershipNumber string `json:"MembershipNumber"`
-	PersonAccountId  string `json:"PersonAccount__c"`
+	PersonAccountID  string `json:"PersonAccount__c"`
 	Vouchers         []Voucher
 }
 
@@ -25,9 +25,9 @@ type TestCase struct {
 // ActivateVoucherRequest is the struct for the API request
 type ActivateVoucherRequest struct {
 	MembershipNumber      string `json:"membershipNumber"`
-	VoucherDefinitionId   string `json:"VoucherDefinitionId"`
+	VoucherDefinitionID   string `json:"VoucherDefinitionId"`
 	VoucherDefinitionCode string `json:"VoucherDefinitionCode"`
-	VoucherId             string `json:"VoucherId"`
+	VoucherID             string `json:"VoucherId"`
 	IsActive              bool   `json:"isActive"`
 	Language              string `json:"language"`
 }

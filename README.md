@@ -1,5 +1,9 @@
 # Clockwork Piranha — Salesforce Apex REST Load-Testing Toolkit
 
+[![Go Version](https://img.shields.io/github/go-mod/go-version/aliozdemir13/clockwork-piranha)](https://go.dev/)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Go CI](https://github.com/aliozdemir13/clockwork-piranha/actions/workflows/ci.yaml/badge.svg)](https://github.com/aliozdemir13/clockwork-piranha/actions)
+
 A Go-based **toolkit** for load-testing Salesforce Apex REST endpoints. Clockwork Piranha deploys a coordinated pack of concurrent goroutines against a target endpoint at a controlled rate, hunting for the throughput limits and infrastructure weak points that production traffic will eventually find on its own.
 
 The name is deliberate. *Piranha* for the swarm: concurrent goroutines acting as a coordinated pack. *Clockwork* for everything else: rate-limited, deterministic, and — most importantly — wound up by you before it runs. This is not a plug-and-play CLI. It's a small, opinionated codebase you adapt to your own org's endpoints, data schema, and test scenarios. The framework handles concurrency, rate limiting, and data-pool consumption; you describe the requests and bring the data.

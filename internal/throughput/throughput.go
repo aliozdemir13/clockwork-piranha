@@ -1,3 +1,4 @@
+// Package throughput contains the test case factories for throughput tests and Execution logic. Each factory function returns a function that takes in MemberDetails and returns a TestCase struct with the appropriate API endpoint, method, and body for the test case.
 package throughput
 
 import (
@@ -24,6 +25,7 @@ type Throughput struct {
 	TestDuration time.Duration
 }
 
+// TestSuite runs all the throughput test cases sequentially. Each test case is executed with its own randomized data queue, and results are printed at the end of each test case.
 func (t *Throughput) TestSuite() {
 	// getVouchers test
 
@@ -69,6 +71,9 @@ func (t *Throughput) TestSuite() {
 	t.runTest("SetConsent", setConsentFactory, mq)
 }
 
+// runTest executes a single test case using the provided factory function to generate test cases from the MemberDetails queue. 
+// It uses a rate limiter to control the RPS and a context to control the duration of the test. 
+// Results are printed at the end of the test, including success count, error count, actual RPS, and top distinct error messages.
 func (t *Throughput) runTest(TestName string, factory func(*data_factory.MemberDetails) *data_factory.TestCase, q []*data_factory.MemberDetails) {
 	fmt.Printf(">>> Testing: %s (%d RPS for %v)\n", TestName, t.TestRPS, t.TestDuration)
 
