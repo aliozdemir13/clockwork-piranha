@@ -79,7 +79,7 @@ func TestFactories(t *testing.T) {
 			expectedName:   "getConsent",
 			expectedMethod: "GET",
 			validate: func(t *testing.T, tc *data_factory.TestCase) {
-				if !strings.Contains(tc.Path, member.PersonAccountId) {
+				if !strings.Contains(tc.Path, member.PersonAccountID) {
 					t.Error("Path missing account id")
 				}
 			},
@@ -90,7 +90,7 @@ func TestFactories(t *testing.T) {
 			expectedName:   "setConsent",
 			expectedMethod: "POST",
 			validate: func(t *testing.T, tc *data_factory.TestCase) {
-				if !strings.Contains(tc.Body, member.PersonAccountId) {
+				if !strings.Contains(tc.Body, member.PersonAccountID) {
 					t.Error("Body missing account id")
 				}
 				// Check for random OptIn/OptOut

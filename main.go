@@ -61,7 +61,7 @@ func main() {
 	i := 0
 	for _, m := range ml {
 		if i < 15 {
-			fmt.Printf("%s %s %s %v", m.Id, m.MembershipNumber, m.PersonAccountId, m.Vouchers)
+			fmt.Printf("%s %s %s %v", m.ID, m.MembershipNumber, m.PersonAccountID, m.Vouchers)
 			i++
 		}
 	}

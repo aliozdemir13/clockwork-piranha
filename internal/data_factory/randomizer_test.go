@@ -26,18 +26,18 @@ func TestShuffleOnInit(t *testing.T) {
 		{
 			name: "Single element slice succeeds",
 			input: []*MemberDetails{
-				{Id: "1"},
+				{ID: "1"},
 			},
 			wantErr: false,
 		},
 		{
 			name: "Multiple elements slice succeeds",
 			input: []*MemberDetails{
-				{Id: "1"},
-				{Id: "2"},
-				{Id: "3"},
-				{Id: "4"},
-				{Id: "5"},
+				{ID: "1"},
+				{ID: "2"},
+				{ID: "3"},
+				{ID: "4"},
+				{ID: "5"},
 			},
 			wantErr: false,
 		},
@@ -51,7 +51,7 @@ func TestShuffleOnInit(t *testing.T) {
 			// track IDs to ensure no data was lost or corrupted during shuffle
 			originalIDs := make(map[string]bool)
 			for _, m := range tt.input {
-				originalIDs[m.Id] = true
+				originalIDs[m.ID] = true
 			}
 
 			got, err := ShuffleOnInit(tt.input)
@@ -76,8 +76,8 @@ func TestShuffleOnInit(t *testing.T) {
 
 			// ensure all original IDs are still present
 			for _, m := range got {
-				if !originalIDs[m.Id] {
-					t.Errorf("ShuffleOnInit() result contains unexpected ID: %s", m.Id)
+				if !originalIDs[m.ID] {
+					t.Errorf("ShuffleOnInit() result contains unexpected ID: %s", m.ID)
 				}
 			}
 		})

@@ -49,9 +49,9 @@ func LoadMembersFromCSV(filename string) ([]*MemberDetails, error) {
 
 		members = append(members, &MemberDetails{
 			// We use strings.Trim to remove any quotes that LazyQuotes might have left behind
-			Id:               strings.Trim(line[0], "\""),
+			ID:               strings.Trim(line[0], "\""),
 			MembershipNumber: strings.Trim(line[1], "\""),
-			PersonAccountId:  strings.Trim(line[2], "\""),
+			PersonAccountID:  strings.Trim(line[2], "\""),
 			Vouchers:         vouchersPool,
 		})
 	}

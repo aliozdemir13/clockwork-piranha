@@ -26,9 +26,9 @@ func TestThroughput_TestSuite(t *testing.T) {
 			InstanceURL: server.URL,
 			Ml: []*data_factory.MemberDetails{
 				{
-					Id:               "1",
+					ID:               "1",
 					MembershipNumber: "M1",
-					PersonAccountId:  "A1",
+					PersonAccountID:  "A1",
 					Vouchers:         []data_factory.Voucher{{VoucherCode: "V1"}},
 				},
 			},
@@ -73,7 +73,7 @@ func TestThroughput_runTest_Table(t *testing.T) {
 	defer server.Close()
 
 	members := []*data_factory.MemberDetails{
-		{Id: "1", MembershipNumber: "M1", Vouchers: []data_factory.Voucher{{VoucherCode: "V1"}}},
+		{ID: "1", MembershipNumber: "M1", Vouchers: []data_factory.Voucher{{VoucherCode: "V1"}}},
 	}
 
 	tests := []struct {
