@@ -56,7 +56,7 @@ The runner itself (`internal/throughput/throughput.go`), the data randomizer, an
 **Requirements:** Go 1.22+ (uses `math/rand/v2`).
 
 ```bash
-git clone <your-repo-url> clockwork-piranha
+git clone https://github.com/aliozdemir13/clockwork-piranha.git
 cd clockwork-piranha
 # Adapt the three files listed in "Adapt to your org first" above
 go run .
