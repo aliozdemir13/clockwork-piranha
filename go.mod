@@ -1,5 +1,5 @@
 module github.com/aliozdemir13/clockwork-piranha
 
-go 1.25.6
+go 1.26.0
 
-require golang.org/x/time v0.15.0
+require golang.org/x/time v0.16.0
